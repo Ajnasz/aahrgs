@@ -1,0 +1,11 @@
+{
+  "name": "aahrgs",
+  "version": "1.0.0",
+  "description": "Argument parser library for CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.mjs test/index.cjs"
+  },
+  "author": "",
+  "license": "MIT"
+}
