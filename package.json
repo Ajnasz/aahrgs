@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "description": "Argument parser library for CLI",
   "main": "index.js",
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "import": "./index.mjs"
+    }
+  },
   "scripts": {
     "test": "node test/index.mjs test/index.cjs"
   },
-  "author": "",
+  "author": "Lajos Koszti<ajnasz@ajnasz.hu>",
   "license": "MIT"
 }
