@@ -12,6 +12,22 @@
   "scripts": {
     "test": "node test/index.mjs test/index.cjs"
   },
-  "author": "Lajos Koszti<ajnasz@ajnasz.hu>",
-  "license": "MIT"
+  "author": "Lajos Koszti <ajnasz@ajnasz.hu>",
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Ajnasz/aahrgs.git"
+  },
+  "keywords": [
+    "argv",
+    "args",
+    "cli"
+  ],
+  "bugs": {
+    "url": "https://github.com/Ajnasz/aahrgs/issues"
+  },
+  "homepage": "https://github.com/Ajnasz/aahrgs#readme"
 }
