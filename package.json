@@ -1,6 +1,6 @@
 {
   "name": "aahrgs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Argument parser library for CLI",
   "main": "index.js",
   "exports": {
