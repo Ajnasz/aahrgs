@@ -1,22 +1,26 @@
 function aahrgs(argv) {
-  return argv.reduce(([nextValue, args], arg) => {
-    if (arg.startsWith("--")) {
-      args[arg.slice(2)] = true;
-      return [arg.slice(2), args];
+  const result = argv.reduce(([currentKey, args], arg) => {
+    if (arg.startsWith('--')) {
+      const key = arg.slice(2);
+      args[key] = true;
+      return [key, args];
     }
 
-    if (arg.startsWith("-")) {
-      args[arg.slice(1)] = true;
-      return [arg.slice(1), args];
+    if (arg.startsWith('-')) {
+      const key = arg.slice(1);
+      args[key] = true;
+      return [key, args];
     }
 
-    if (nextValue) {
-      args[nextValue] = arg;
-      return [false, args];
+    if (currentKey) {
+      args[currentKey] = arg;
+      return [null, args];
     }
 
     return [null, args];
-  }, [null, {}])[1];
+  }, [null, Object.create(null)])[1];
+
+  return Object.freeze(result);
 }
 
 module.exports = aahrgs;
